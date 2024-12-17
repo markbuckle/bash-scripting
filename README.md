@@ -136,6 +136,17 @@ wc -w <<< "Hello there word count"
 
 "$?" returns the value of the exit code on the last executed command. Exit code "0" means the command was executed without any issues. Exit code "1" means the values were not the same.
 
+Exampel:
+```sh
+[hello = hello]
+echo $?
+```
+or
+```sh
+[1 = 1]
+echo $?
+```
+## If / Elif / Else
 
 ## Video tutorial:
 
