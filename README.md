@@ -81,6 +81,8 @@ echo Hello $FIRST_NAME $LAST_NAME
 
 Arguments that are at a specific position, counting from one (0) onwards. Position 0 is reserved for the shell itself.
 
+echo Hello $1 $2
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
