@@ -83,6 +83,54 @@ Arguments that are at a specific position, counting from one (0) onwards. Positi
 
 echo Hello $1 $2
 
+## Output / Input Redirection 
+
+### Piping
+
+Piping allows you to perform a specific action on the output of a command. Let's say the output of a command is very long and you want to filter something out. Piping allows you to filter out what you want. "|" is the pipe symbol.
+
+Examples:
+```sh
+echo Hello there | grep there
+
+ls -l /usr/bin | grep bash 
+```
+### Output redirection
+
+Symbols used:
+> symbol to write to a file
+>> symbol to append to a file
+
+Example:
+To print Hello World! into a file called hello.txt:
+```sh
+echo Hello World! > hello.txt
+```
+Note that if you use the > symbol again, it will overwrite the previous output with the new output rather than adding on to it. 
+This is where appending comes in place:
+```sh
+echo Good day to you >> hello.txt
+```
+
+To get a word count:
+```sh
+wc -w hello.txt
+```
+However it shows the name of the file. To hide the file name:
+```sh
+wc -w < hello.txt
+```
+
+To write what you want to place in your output:
+```sh
+cat << EOF
+```
+Make sure to finish/close your statement with EOF
+
+To feed a string into a command. Make sure the string is in double quotes:
+```sh
+wc -w <<< "Hello there word count"
+```
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
