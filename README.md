@@ -63,3 +63,13 @@ You can now run this file with:
 ```sh
 ./shelltest.sh
 ```
+
+## Variables
+
+FIRST_NAME=Mark 
+LAST_NAME=Buckle 
+echo $FIRST_NAME $LAST_NAME
+
+## Video tutorial:
+
+https://www.youtube.com/watch?v=tK9Oc6AEnR4
