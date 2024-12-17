@@ -131,6 +131,12 @@ To feed a string into a command. Make sure the string is in double quotes:
 ```sh
 wc -w <<< "Hello there word count"
 ```
+
+## Test Operators
+
+"$?" returns the value of the exit code on the last executed command. Exit code "0" means the command was executed without any issues. Exit code "1" means the values were not the same.
+
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
