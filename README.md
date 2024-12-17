@@ -70,6 +70,17 @@ FIRST_NAME=Mark
 LAST_NAME=Buckle 
 echo $FIRST_NAME $LAST_NAME
 
+echo What is your first name?
+read FIRST_NAME
+echo What is your last name?
+read LAST_NAME
+
+echo Hello $FIRST_NAME $LAST_NAME
+
+## Positional Arguments
+
+Arguments that are at a specific position, counting from one (0) onwards. Position 0 is reserved for the shell itself.
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
