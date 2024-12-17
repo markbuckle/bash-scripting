@@ -148,6 +148,19 @@ echo $?
 ```
 ## If / Elif / Else
 
+"${1,,}" is some argument converted to lower case. 
+
+```sh
+#!/bin/bash
+if [ ${1,,} = mark ]; then
+        echo "Oh, you're the boss here. Welcome!"
+elif [ ${1,,} = help]; then
+        echo "Just enter your username, duh!"
+else
+        echo "I don't know who you are. But you're not the boss of me!"vim ifelifelse.sh
+fi
+```
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
