@@ -258,7 +258,36 @@ showname(){
 showname Mark
 ```
 
+## AWK
 
+Allows you to filter file contents or the output of a command in such a way that we can print out the most essential parts and get the output the way we like it.
+
+### AWK Example 1
+Create a simple testfile:
+```sh
+echo one two three > testfile.txt
+vim testfile.txt
+```
+
+Print the first word in the testfile with AWK:
+```sh
+awk '{print $1}' testfile.txt
+```
+#### AWK Example 2
+Create a simple csv file and enter "one,two,three". Make sure to include commas instead of spaces:
+```sh
+vim csvtest.csv
+```
+Print the first word in the csv file with AWK:
+```sh
+awk -F, '{print $1}' csvtest.csv
+```
+
+### AWK Example 3
+Print out a word within a statement:
+```sh
+echo "Just get this word: Hello" | awk '{print $5}'
+```
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
