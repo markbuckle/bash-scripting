@@ -273,7 +273,7 @@ Print the first word in the testfile with AWK:
 ```sh
 awk '{print $1}' testfile.txt
 ```
-#### AWK Example 2
+### AWK Example 2
 Create a simple csv file and enter "one,two,three". Make sure to include commas instead of spaces:
 ```sh
 vim csvtest.csv
@@ -287,6 +287,29 @@ awk -F, '{print $1}' csvtest.csv
 Print out a word within a statement:
 ```sh
 echo "Just get this word: Hello" | awk '{print $5}'
+```
+
+## SED 
+
+When you want to change/modify values within files, SED is a great option. 
+```sh
+vim sedtest.txt
+```
+
+Change the value of a specific word within the file:
+```sh
+sed 's/oldword/newword/g' sedtest.txt
+```
+'s' stands for substitute and is in the mode place.
+'g' stands for globally and is in the location place.
+
+Let's say we want to keep the original file in a backup file:
+```sh
+sed -i.ORIGINAL 's/oldword/newword/g' sedtest.txt
+```
+To view the original:
+```sh
+vim sedtest.txt.ORIGINAL
 ```
 ## Video tutorial:
 
