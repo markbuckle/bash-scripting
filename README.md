@@ -163,6 +163,26 @@ fi
 
 ## Case Statements
 
+Easier to read and better than if/elif/else when checking for multiple values.
+
+If the option matches the case, then we will perform the action bound to that option.
+
+Note that "|" is not a pipe symbol in this case, just a separator for options.
+
+```sh
+#!/bin/bash
+case ${1,,} in
+        mark | administrator)
+                echo "Hello, you're the boss here!"
+                ;;
+        help)
+                echo "Just enter your username!"
+                ;;
+        *)
+                echo "Hello. You're not the boss of me."
+fi
+```
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
