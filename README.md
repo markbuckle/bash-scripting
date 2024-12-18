@@ -200,7 +200,16 @@ To print out a specific index (in this case the first item [0]):
 echo ${MY_FIRST_LIST[0]}
 ```
 
+## For Loops
 
+Create an array:
+```sh
+MY_FIRST_LIST=(one two three four five)
+```
+Write a simple for loop:
+```sh
+for item in ${MY_FIRST_LIST[@]}; do echo -n $item | wc -c; done
+```
 
 ## Video tutorial:
 
