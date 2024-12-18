@@ -183,6 +183,25 @@ case ${1,,} in
 fi
 ```
 
+## Arrays
+
+Create an array:
+```sh
+MY_FIRST_LIST=(one two three four five)
+```
+
+To print out the full array:
+```sh
+echo ${MY_FIRST_LIST[@]}
+```
+
+To print out a specific index (in this case the first item [0]):
+```sh
+echo ${MY_FIRST_LIST[0]}
+```
+
+
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
