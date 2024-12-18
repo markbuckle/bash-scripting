@@ -211,6 +211,54 @@ Write a simple for loop:
 for item in ${MY_FIRST_LIST[@]}; do echo -n $item | wc -c; done
 ```
 
+## Functions
+
+```sh
+#!/bin/bash
+
+showuptime(){
+        up=$(uptime -p | cut -c4-)
+        since=$(uptime -s)
+        cat << EOF
+-----
+THis machine has been up for ${up}
+It has been running since ${since}
+-----
+EOF
+}
+showuptime
+```
+
+When you define variables, they are available to the entire script by default. To avoid overwriting global variables you need to use local variables.
+
+```sh
+#!/bin/bash
+
+showuptime(){
+        local up=$(uptime -p | cut -c4-)
+        local since=$(uptime -s)
+        cat << EOF
+-----
+THis machine has been up for ${up}
+It has been running since ${since}
+-----
+EOF
+}
+showuptime
+```
+
+### Post arguements
+
+```sh
+#!/bin/bash
+
+showname(){
+        echo hello $1
+}
+showname Mark
+```
+
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
