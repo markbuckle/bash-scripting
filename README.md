@@ -161,6 +161,8 @@ else
 fi
 ```
 
+## Case Statements
+
 ## Video tutorial:
 
 https://www.youtube.com/watch?v=tK9Oc6AEnR4
